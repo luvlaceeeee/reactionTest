@@ -1,0 +1,76 @@
+body {
+    display: flex;
+    justify-content: center;
+    font-family: "Prompt";
+    background: linear-gradient(-45deg, #ee5252, #e73c56, #23d526, #23d585);
+    background-size: 400% 400%;
+    height: 100vh;
+    overflow: hidden;
+    animation: gradient 15s ease infinite;
+    font-weight: 300;
+    line-height: 1.45;
+    color: #0F1108;
+}
+
+.container{
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    margin: auto;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.header{
+    margin-bottom: 100px;
+}
+
+.header h2{
+    margin: -15px 0;
+    font-size: 20px;
+}
+
+.header h1{
+    font-size: 40px;
+}
+
+.buttons{
+    margin: 15px;
+}
+
+.buttons button{
+    margin: 0 -10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    outline: 0;
+    background: #4CAF50;
+    width: 90%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+.buttons button:hover,.buttons button:active,.buttons button:focus {
+    background: #43A047;
+}
+
+.for-top {
+    margin-top: 30px;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
