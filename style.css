@@ -3,6 +3,7 @@ body {
     justify-content: center;
     font-family: "Prompt";
     background: linear-gradient(-45deg, #ee5252, #e73c56, #23d526, #23d585);
+    /*background: linear-gradient(-45deg, #ee5252, #e73c56);*/
     background-size: 400% 400%;
     height: 100vh;
     overflow: hidden;
@@ -55,13 +56,35 @@ body {
     border-radius: 40px;
 }
 
-.buttons button:hover,.buttons button:active,.buttons button:focus {
+.buttons button:hover {
     background: #43A047;
 }
 
 .for-top {
     margin-top: 30px;
 }
+.for-ready{
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    width: 360px;
+    margin: 100px;
+    padding: 25px;
+    text-align: center;
+    max-height: 150px;
+    /*height: 70px;*/
+}
+
+.get-ready{
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.timer{
+     font-size: 60px;
+    margin-top: 40px;
+ }
 
 @keyframes gradient {
     0% {
