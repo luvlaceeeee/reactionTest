@@ -16,18 +16,17 @@ startButton.addEventListener('click', () => {
     divForReadyText.appendChild(getReadyText)
     divForReadyText.appendChild(brEl)
 
-    // readyTimer.textContent = 3
+    readyTimer.textContent = 3
     readyTimer.classList = 'timer'
     divForReadyText.appendChild(readyTimer)
 
     function timer(num){
         return function (){
-            num = num - 1
             readyTimer.textContent = num
+            num = num - 1
         }
-
     }
 
-    let timer3sec = setInterval(timer(4), 1000)
-    setTimeout(() => { clearInterval(timer3sec)}, 3000);
+    let timer3sec = setInterval(timer(readyTimer.textContent - 1), 1000)
+    setTimeout(() => { clearInterval(timer3sec)}, ((readyTimer.textContent - 1) * 1000));
 })
