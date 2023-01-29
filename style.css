@@ -37,8 +37,29 @@ body {
     font-size: 40px;
 }
 
-.buttons{
-    margin: 15px;
+.bts{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.bts button{
+    margin: 0 -10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    outline: 0;
+    background: #ee5959;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 35px;
+    cursor: pointer;
+    border-radius: 500px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
 }
 
 .buttons button{
@@ -69,10 +90,11 @@ body {
     background: #FFFFFF;
     max-width: 360px;
     width: 360px;
-    margin: 100px;
+    margin: auto;
     padding: 25px;
     text-align: center;
     max-height: 150px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
     /*height: 70px;*/
 }
 

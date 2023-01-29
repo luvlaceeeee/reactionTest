@@ -2,9 +2,7 @@ const startButton = document.querySelector('#start-button')
 const mainForm = document.querySelector('.container')
 
 startButton.addEventListener('click', () => {
-    // mainForm.style.display = 'none'
     mainForm.hidden = true
-    document.body.style.background = 'linear-gradient(-45deg, #ee5252, #e73c56)'
 
     const divForReadyText = document.createElement('div')
     divForReadyText.classList = 'for-ready'
@@ -44,21 +42,31 @@ startButton.addEventListener('click', () => {
     }
 
     intervalTimer().then(() => {
-        divForReadyText.style.height = '70px'
-        getReadyText.textContent = 'Wait...'
+        divForReadyText.hidden = true
         readyTimer.hidden = true
         brEl.hidden = true
+        const divForBt = document.createElement('div')
+        const waitBt = document.createElement('button');
+        divForBt.classList = 'bts'
+        document.body.appendChild(divForBt)
+        waitBt.textContent = 'Wait'
+        divForBt.appendChild(waitBt)
+        waitBt.setAttribute('id', 'click-button')
     }).then(() => {
         setTimeout(() => {
-            document.body.style.background = 'linear-gradient(-45deg, #23d526, #23d585)'
-            getReadyText.textContent = 'CLICK!'
+            document.querySelector('#click-button').textContent = 'CLICK!'
+            document.querySelector('#click-button').style.background = '#83ee59'
             const startTime = Date.now()
-            document.body.addEventListener('click', () => {
+            document.querySelector('#click-button').addEventListener('click', () => {
                 const endTime = Date.now()
-                getReadyText.textContent = `${endTime - startTime} ms`
+                getReadyText.textContent = `${endTime - startTime} ms click to try again`
+                divForReadyText.hidden = false
+                document.querySelector('.bts').style.display = 'none'
+                divForReadyText.addEventListener('click', () => {
+                    window.location.reload()
+                })
             })
         }, getRandomInt(7) * 1000)
     })
-
 
 })
