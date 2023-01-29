@@ -48,19 +48,17 @@ startButton.addEventListener('click', () => {
         getReadyText.textContent = 'Wait...'
         readyTimer.hidden = true
         brEl.hidden = true
-        // const startTime = Date.now()
-        // document.body.addEventListener('click', () => {
-        //     const endTime = Date.now()
     }).then(() => {
         setTimeout(() => {
-            const startTime = Date.now()
             document.body.style.background = 'linear-gradient(-45deg, #23d526, #23d585)'
             getReadyText.textContent = 'CLICK!'
+            const startTime = Date.now()
             document.body.addEventListener('click', () => {
                 const endTime = Date.now()
-                getReadyText.textContent = `Your result ${endTime - startTime} ms`
+                getReadyText.textContent = `${endTime - startTime} ms`
             })
         }, getRandomInt(7) * 1000)
     })
+
 
 })

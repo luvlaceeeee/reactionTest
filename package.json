@@ -1,0 +1,19 @@
+{
+  "name": "reactiontest",
+  "version": "1.0.0",
+  "description": "site for test reaction. goal practice DOM and promise",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luvlaceeeee/reactionTest.git"
+  },
+  "author": "luvlace",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luvlaceeeee/reactionTest/issues"
+  },
+  "homepage": "https://github.com/luvlaceeeee/reactionTest#readme"
+}
